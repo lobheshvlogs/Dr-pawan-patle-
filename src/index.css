@@ -1,0 +1,78 @@
+@tailwind base;
+@tailw ind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: #060B18;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-editorial {
+    font-family: 'Newsreader', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060B18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141F48;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38A4F6;
+}
+
+/* Print styles for academic CV / portfolio printouts */
+@media print {
+
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+@keyframes scannerMove {
+  0% {
+    top: 6%;
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 92%;
+    opacity: 0.9;
+  }
+}
